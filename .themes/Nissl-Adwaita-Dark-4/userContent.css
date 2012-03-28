@@ -1,0 +1,29 @@
+input {
+  color: black;
+  background-color: white;
+}
+
+textarea {
+  color: black;
+  background-color: white;
+}
+
+select {
+  color: #eeeeec;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  color: ThreeDFace !important;
+}
+
+*|*::-moz-radio {
+  background-color: white;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  color: #eeeeec;
+}

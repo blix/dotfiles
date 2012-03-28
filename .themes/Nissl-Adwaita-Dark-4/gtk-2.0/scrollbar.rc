@@ -1,0 +1,260 @@
+#-- Scrollbars style --------------------------------------------------------
+style "scrollbar1" 
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL] = @base_color
+  bg[PRELIGHT]      = @base_color
+  bg[SELECTED]  = @base_color
+  bg[INSENSITIVE]   = @bg_color
+  bg[ACTIVE] = @base_color
+
+  engine "murrine"
+  {
+    roundness = 4
+    contrast = 1.0
+    sliderstyle  = 3   
+    stepperstyle = 3
+    scrollbarstyle      = 0 
+  }
+}
+
+style "scrollbar" {
+
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL] = @base_color
+  bg[PRELIGHT]      = @base_color
+  bg[SELECTED]  = @base_color
+  bg[INSENSITIVE]   = @bg_color
+  bg[ACTIVE] = @base_color
+  
+	engine "pixmap" {
+		image {
+			function	= SLIDER
+			orientation	= VERTICAL
+			state		= NORMAL
+			recolorable	= TRUE
+			file		= "Scrollbars/scroll-vhandle.png"
+			border		= {5, 5, 15, 22}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= SLIDER
+			orientation	= VERTICAL
+			state		= PRELIGHT
+			recolorable	= TRUE
+			file		= "Scrollbars/scroll-vhandle-hover.png"
+			border		= {5, 5, 15, 22}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= BOX
+			orientation	= VERTICAL
+			file		= "Scrollbars/scroll-background.png"
+		}
+
+		image {
+			function	= BOX
+			detail		= "hscrollbar"
+		}
+
+		image {
+			function	= SLIDER
+			orientation	= HORIZONTAL
+			state		= NORMAL
+			recolorable	= TRUE
+			file		= "Scrollbars/scroll-hhandle.png"
+			border		= {15, 22, 5, 5}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= SLIDER
+			orientation	= HORIZONTAL
+			state		= PRELIGHT
+			recolorable	= TRUE
+			file		= "Scrollbars/scroll-hhandle-hover.png"
+			border		= {15, 22, 5, 5}
+			stretch		= TRUE
+		}
+
+		image {
+			function	= BOX
+			orientation	= HORIZONTAL
+			file		= "Scrollbars/scroll-background.png"
+		}
+
+		image {
+			function	= BOX
+			detail		= "vscrollbar"
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Scrollbars/scroll-button-up.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "Scrollbars/scroll-button-up-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Scrollbars/scroll-button-up-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "Scrollbars/scroll-button-up-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Scrollbars/scroll-button-down.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "Scrollbars/scroll-button-down-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Scrollbars/scroll-button-down-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "Scrollbars/scroll-button-down-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Scrollbars/scroll-button-right.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "Scrollbars/scroll-button-right-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Scrollbars/scroll-button-right-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "Scrollbars/scroll-button-right-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= NORMAL
+			file		= "Scrollbars/scroll-button-left.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "Scrollbars/scroll-button-left-hover.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Scrollbars/scroll-button-left-active.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image {
+			function	= STEPPER
+			recolorable	= TRUE
+			state		= INSENSITIVE
+			file		= "Scrollbars/scroll-button-left-disabled.png"
+			border		= {0, 0, 0, 0}
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+	}
+}
+
+class "GtkScrollbar"       		style "scrollbar"
+# ------------------------------------------------------------------------------

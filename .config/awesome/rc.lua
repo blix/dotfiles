@@ -8,6 +8,8 @@ require("beautiful")
 require("naughty")
 -- Applets
 require("vicious")
+require("freedesktop.utils")
+require("freedesktop.menu")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -43,6 +45,9 @@ beautiful.init("/home/govind/.config/awesome/themes/govind/theme.lua")
 terminal = "terminator"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -x " .. editor
+
+freedesktop.utils.terminal = terminal  -- default: "xterm"
+freedesktop.utils.icon_theme = 'gnome' -- look inside /usr/share/icons/, default: nil (don't use icon theme)
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -91,13 +96,15 @@ myawesomemenu = {
    { "quit", awesome.quit }
 }
 
-mymainmenu = awful.menu({ items = {
-                                    { "open terminal", terminal },
-                                    { "Firefox", "firefox" },
-                                    { "File Manager", "thunar" },
-                                    { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                  }
-                        })
+menu_items = freedesktop.menu.new()
+
+table.insert(menu_items, { "awesome", myawesomemenu, beautiful.awesome_icon })
+table.insert(menu_items, 0, { "Terminal", terminal, freedesktop.utils.lookup_icon({icon = 'terminator'}) })
+table.insert(menu_items, 1, { "Firefox", "firefox", freedesktop.utils.lookup_icon({icon = 'firefox'}) })
+table.insert(menu_items, 2, { "File Manager", "thunar", freedesktop.utils.lookup_icon({icon = 'system-file-manager'}) })
+
+mymainmenu = awful.menu({ items = menu_items, width = 150 })
+
 
 mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
                                      menu = mymainmenu })
