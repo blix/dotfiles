@@ -214,6 +214,7 @@ for s = 1, screen.count() do
 
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
+    bottombox = awful.wibox({ position = "bottom", screen = s })
     -- Add widgets to the wibox - order matters
     mywibox[s].widgets = {
         {
@@ -224,7 +225,6 @@ for s = 1, screen.count() do
             separator,
             layout = awful.widget.layout.horizontal.leftright
         },
-        mylayoutbox[s],
         separator,
         mytextclock,
         separator,
@@ -234,6 +234,10 @@ for s = 1, screen.count() do
         separator,
         s == 1 and mysystray or nil,
         fswidget,
+        layout = awful.widget.layout.horizontal.rightleft
+    }
+    bottombox.widgets = {
+        mylayoutbox[s],
         separator,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
