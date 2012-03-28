@@ -50,7 +50,7 @@
     set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
     set virtualedit=onemore         " allow for cursor beyond last character
     set history=1000                " Store a ton of history (default is 20)
-    set spell                       " spell checking on
+    set nospell                       " spell checking on
 
     " Setting up the directories {
         set backup                      " backups are nice ...
@@ -196,7 +196,4 @@
     vnoremap < <gv
     vnoremap > >gv
 
-    " Fix home and end keybindings for screen, particularly on mac
-    " - for some reason this fixes the arrow keys too. huh.
-    map
 

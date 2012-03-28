@@ -204,9 +204,9 @@ if &t_Co > 255
     hi PMenuSel   ctermfg=223 ctermbg=235
 
     if exists("g:darkburn_high_Contrast")
-        hi Normal ctermfg=188 ctermbg=234
+        hi Normal ctermfg=188
     else
-        hi Normal ctermfg=188 ctermbg=237
+        hi Normal ctermfg=188
         hi Cursor          ctermbg=109
         hi diffadd         ctermbg=237
         hi diffdelete      ctermbg=238
@@ -240,7 +240,7 @@ endif
 
 if exists("g:darkburn_high_Contrast")
     " use new darker background
-    hi Normal          guifg=#ffffff guibg=#1f1f1f
+    hi Normal          guifg=#ffffff 
     hi CursorLine      guibg=#121212 gui=bold
     hi Pmenu           guibg=#242424 guifg=#ccccbc
     hi PMenuSel        guibg=#353a37 guifg=#ccdc90 gui=bold
@@ -254,7 +254,7 @@ if exists("g:darkburn_high_Contrast")
     hi CursorColumn    guifg=#dcdccc guibg=#2b2b2b
 else
     " Original, lighter background
-    hi Normal          guifg=#dcdccc guibg=#3f3f3f
+    hi Normal          guifg=#dcdccc
     hi CursorLine      guibg=#434443
     hi Pmenu           guibg=#2c2e2e guifg=#9f9f9f
     hi PMenuSel        guibg=#242424 guifg=#d0d0a0 gui=bold

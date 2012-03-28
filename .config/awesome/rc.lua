@@ -98,10 +98,10 @@ myawesomemenu = {
 
 menu_items = freedesktop.menu.new()
 
+table.insert(menu_items, { "Terminal", terminal, freedesktop.utils.lookup_icon({icon = 'terminator'}) })
+table.insert(menu_items, { "Firefox", "firefox", freedesktop.utils.lookup_icon({icon = 'firefox'}) })
+table.insert(menu_items, { "File Manager", "thunar", freedesktop.utils.lookup_icon({icon = 'system-file-manager'}) })
 table.insert(menu_items, { "awesome", myawesomemenu, beautiful.awesome_icon })
-table.insert(menu_items, 0, { "Terminal", terminal, freedesktop.utils.lookup_icon({icon = 'terminator'}) })
-table.insert(menu_items, 1, { "Firefox", "firefox", freedesktop.utils.lookup_icon({icon = 'firefox'}) })
-table.insert(menu_items, 2, { "File Manager", "thunar", freedesktop.utils.lookup_icon({icon = 'system-file-manager'}) })
 
 mymainmenu = awful.menu({ items = menu_items, width = 150 })
 

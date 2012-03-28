@@ -236,7 +236,7 @@ hi String          guifg=#cc9393
 hi Structure       guifg=#efefaf gui=bold
 hi Tag             guifg=#e89393 gui=bold
 hi Title           guifg=#efefef gui=bold
-hi Todo            guifg=#dfdfdf guibg=bg gui=bold
+hi Todo            guifg=#dfdfdf guibg=#284f28 gui=bold
 hi Typedef         guifg=#dfe4cf gui=bold
 hi Type            guifg=#dfdfbf gui=bold
 hi Underlined      guifg=#dcdccc gui=underline
@@ -333,7 +333,7 @@ if &t_Co > 255
             hi CursorColumn      ctermbg=235   cterm=none
         endif
     else
-        hi Normal ctermfg=188 ctermbg=None
+        hi Normal ctermfg=188, ctermbg=none
         hi Cursor          ctermbg=109
         hi diffadd         ctermbg=237
         hi diffdelete      ctermbg=238
@@ -342,7 +342,7 @@ if &t_Co > 255
         hi incsearch       ctermbg=228
         hi linenr          ctermbg=235
         hi search          ctermbg=238
-        hi statement       ctermbg=237
+        hi statement       ctermbg=none
         hi statusline      ctermbg=144
         hi statuslinenc    ctermbg=108
         hi title           ctermbg=237
@@ -357,7 +357,7 @@ if &t_Co > 255
         if exists("g:zenburn_color_also_Ignore") && g:zenburn_color_also_Ignore
             hi Ignore          ctermfg=240
         endif
-        
+
         " normal mode, lighter CursorLine
         hi CursorLine      ctermbg=238   cterm=none
 
