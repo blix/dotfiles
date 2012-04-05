@@ -1,0 +1,31 @@
+alternative_header_first_line_format = "$b$1$aqqu$/a$9 $5{%t}|{%f}$9 $1$atqq$/a$9$/b"
+alternative_header_second_line_format = "$b$6%a $1-$9 %b $1-$9 %y$9$/b"
+song_columns_list_format = "(6f)[magenta]{l} (30y)[blue]{t|f} (30)[magenta]{a} (30)[blue]{b} (6f)[magenta]{yr}"
+song_window_title_format = ""
+playlist_display_mode = "columns" (classic/columns)
+browser_display_mode = "columns" (classic/columns)
+search_engine_display_mode = "columns" (classic/columns)
+progressbar_look = "=>-"
+user_interface = "alternative" (classic/alternative)
+header_visibility = "yes"
+statusbar_visibility = "yes"
+titles_visibility = "no"
+header_text_scrolling = "yes"
+fancy_scrolling = "yes"
+
+colors_enabled = "yes"
+empty_tag_color = "blue"
+header_window_color = "blue"
+volume_color = "blue"
+state_line_color = "blue"
+state_flags_color = "blue"
+main_window_color = "magenta"
+color1 = "blue"
+color2 = "white"
+main_window_highlight_color = "blue"
+progressbar_color = "blue"
+statusbar_color = "blue"
+alternative_ui_separator_color = "black"
+active_column_color = "magenta""
+active_window_border = "blue"
+window_border_color = "blue"

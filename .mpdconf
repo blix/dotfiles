@@ -1,0 +1,17 @@
+port            "6600"
+music_directory         "/mnt/Music"
+playlist_directory      "~/.mpd/playlists"
+db_file                 "~/.mpd/mpd.db"
+log_file                "~/.mpd/mpd.log"
+
+audio_output {
+    type    "pulse"
+    name    "My MPD PulseAudio Output"
+    #server  "localhost"   # optional
+    #sink    "alsa_output" # optional
+}
+audio_output {
+    type                    "fifo"
+    name                    "my_fifo"
+    path                    "~/.mpd/fifo"
+}
